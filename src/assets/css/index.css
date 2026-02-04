@@ -11,18 +11,17 @@ header {
   background-color: white;
 }
 
-header a {
-  display: flex;
-  align-items: center;
-  height: 100%;
+header li {
   position: relative;
 }
 
-header a:hover {
+header a:hover,
+header a.active {
   color: var(--dc-comics-blue) !important;
+  transition: 0.1s linear;
 }
 
-header a:hover::after {
+header a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -30,6 +29,13 @@ header a:hover::after {
   right: 0;
   height: 5px;
   background-color: var(--dc-comics-blue);
+  opacity: 0;
+}
+
+header a:hover::after,
+header a.active::after {
+  opacity: 1;
+  transition: 0.1s linear;
 }
 
 main {
