@@ -1,3 +1,69 @@
+:root {
+  --dc-comics-blue: #0282f9;
+}
+
 body {
   font-family: "Open Sans", Arial, sans-serif;
+}
+
+header a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: relative;
+}
+
+header a:hover {
+  color: var(--dc-comics-blue) !important;
+}
+
+header a:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background-color: var(--dc-comics-blue);
+}
+
+footer {
+  background-image: url(../img/footer-bg.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer button {
+  border: 2px solid var(--dc-comics-blue) !important;
+}
+
+.footer-top li {
+  line-height: 1.1rem;
+}
+
+.footer-link {
+  color: #9aa0a6;
+  text-decoration: none;
+  font-size: 0.7rem;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.dc-logo-bg {
+  background-image: url(../img/dc-logo-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  min-height: 300px;
+}
+
+.footer-bottom {
+  background-color: #303030;
+}
+
+.follow-us {
+  color: var(--dc-comics-blue);
 }
