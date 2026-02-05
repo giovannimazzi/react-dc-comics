@@ -15,7 +15,7 @@ export default function Footer() {
               <div className="row py-5">
                 {/* colonna sinistra: DC COMICS + SHOP */}
                 <div className="col-4 w-25">
-                  <h5 className="text-white fw-bold">DC COMICS</h5>
+                  <p className="h5 text-white fw-bold">DC COMICS</p>
                   <ul className="list-unstyled">
                     <li>
                       <a className="footer-link" href="#Characters">
@@ -54,7 +54,7 @@ export default function Footer() {
                     </li>
                   </ul>
 
-                  <h5 className="text-white fw-bold mt-4">SHOP</h5>
+                  <p className="h5 text-white fw-bold mt-4">SHOP</p>
                   <ul className="list-unstyled">
                     <li>
                       <a className="footer-link" href="#ShopDC">
@@ -71,7 +71,7 @@ export default function Footer() {
 
                 {/* colonna centrale: DC */}
                 <div className="col-4 w-25">
-                  <h5 className="text-white fw-bold">DC</h5>
+                  <p className="h5 text-white fw-bold">DC</p>
                   <ul className="list-unstyled">
                     <li>
                       <a className="footer-link" href="#TermsOfUse">
@@ -133,7 +133,7 @@ export default function Footer() {
 
                 {/* colonna destra: SITES */}
                 <div className="col-4 w-25">
-                  <h5 className="text-white fw-bold">SITES</h5>
+                  <p className="h5 text-white fw-bold">SITES</p>
                   <ul className="list-unstyled">
                     <li>
                       <a className="footer-link" href="#DC">
