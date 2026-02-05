@@ -50,6 +50,11 @@ main {
   height: 350px;
 }
 
+.comics-list,
+.comics-list * {
+  border: 1px dashed red;
+}
+
 .blue-strip {
   background-color: var(--dc-comics-blue);
 }
