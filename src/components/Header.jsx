@@ -29,7 +29,7 @@ export default function Header() {
                     className="h-100 d-flex flex-column justify-content-center"
                   >
                     <a
-                      className={`text-decoration-none text-dark ${link === "COMICS" ? "active" : ""}`}
+                      className={`text-decoration-none text-dark ${index === 1 ? "active" : ""}`}
                       href={`#${link}`}
                     >
                       {link}
