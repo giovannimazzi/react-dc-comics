@@ -1,16 +1,46 @@
 import logo from "/dc-logo.png";
 
 const links = [
-  "CHARACTERS",
-  "COMICS",
-  "MOVIES",
-  "TV",
-  "GAMES",
-  "COLLECTIBLES",
-  "VIDEOS",
-  "FANS",
-  "NEWS",
-  "SHOP",
+  {
+    url: "#",
+    text: "CHARACTERS",
+  },
+  {
+    url: "#",
+    text: "COMICS",
+  },
+  {
+    url: "#",
+    text: "MOVIES",
+  },
+  {
+    url: "#",
+    text: "TV",
+  },
+  {
+    url: "#",
+    text: "GAMES",
+  },
+  {
+    url: "#",
+    text: "COLLECTIBLES",
+  },
+  {
+    url: "#",
+    text: "VIDEOS",
+  },
+  {
+    url: "#",
+    text: "FANS",
+  },
+  {
+    url: "#",
+    text: "NEWS",
+  },
+  {
+    url: "#",
+    text: "SHOP",
+  },
 ];
 
 export default function Header() {
@@ -30,9 +60,9 @@ export default function Header() {
                   >
                     <a
                       className={`text-decoration-none text-dark ${index === 1 ? "active" : ""}`}
-                      href={`#${link}`}
+                      href={link.url}
                     >
-                      {link}
+                      {link.text}
                     </a>
                   </li>
                 );
