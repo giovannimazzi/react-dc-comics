@@ -1,5 +1,18 @@
 import logo from "/dc-logo.png";
 
+const links = [
+  "CHARACTERS",
+  "COMICS",
+  "MOVIES",
+  "TV",
+  "GAMES",
+  "COLLECTIBLES",
+  "VIDEOS",
+  "FANS",
+  "NEWS",
+  "SHOP",
+];
+
 export default function Header() {
   return (
     <header>
@@ -9,65 +22,21 @@ export default function Header() {
 
           <nav>
             <ul className="h-100 d-flex gap-3 list-unstyled m-0 fw-bold">
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a
-                  className="text-decoration-none text-dark"
-                  href="#CHARACTERS"
-                >
-                  CHARACTERS
-                </a>
-              </li>
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a
-                  className="text-decoration-none text-dark active"
-                  href="#COMICS"
-                >
-                  COMICS
-                </a>
-              </li>
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a className="text-decoration-none text-dark" href="#MOVIES">
-                  MOVIES
-                </a>
-              </li>
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a className="text-decoration-none text-dark" href="#TV">
-                  TV
-                </a>
-              </li>
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a className="text-decoration-none text-dark" href="#GAMES">
-                  GAMES
-                </a>
-              </li>
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a
-                  className="text-decoration-none text-dark"
-                  href="#COLLECTIBLES"
-                >
-                  COLLECTIBLES
-                </a>
-              </li>
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a className="text-decoration-none text-dark" href="#VIDEOS">
-                  VIDEOS
-                </a>
-              </li>
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a className="text-decoration-none text-dark" href="#FANS">
-                  FANS
-                </a>
-              </li>
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a className="text-decoration-none text-dark" href="#NEWS">
-                  NEWS
-                </a>
-              </li>
-              <li className="h-100 d-flex flex-column justify-content-center">
-                <a className="text-decoration-none text-dark" href="#SHOP">
-                  SHOP
-                </a>
-              </li>
+              {links.map((link, index) => {
+                return (
+                  <li
+                    key={index}
+                    className="h-100 d-flex flex-column justify-content-center"
+                  >
+                    <a
+                      className={`text-decoration-none text-dark ${link === "COMICS" ? "active" : ""}`}
+                      href={`#${link}`}
+                    >
+                      {link}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </nav>
         </div>
