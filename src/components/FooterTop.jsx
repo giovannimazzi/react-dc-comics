@@ -1,3 +1,5 @@
+import React from "react";
+
 const linksLists = [
   {
     title: "DC COMICS",
@@ -139,10 +141,8 @@ export default function FooterTop() {
                   <div key={index} className="col-4 w-25">
                     {group.map((list, index) => {
                       return (
-                        <>
-                          <p key={index} className="h5 text-white fw-bold">
-                            {list.title}
-                          </p>
+                        <React.Fragment key={index}>
+                          <p className="h5 text-white fw-bold">{list.title}</p>
                           <ul className="list-unstyled">
                             {list.links.map((link, index) => {
                               return (
@@ -154,7 +154,7 @@ export default function FooterTop() {
                               );
                             })}
                           </ul>
-                        </>
+                        </React.Fragment>
                       );
                     })}
                   </div>

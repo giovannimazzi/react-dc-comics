@@ -50,9 +50,18 @@ main {
   height: 350px;
 }
 
-.comics-list,
-.comics-list * {
-  border: 1px dashed red;
+.comics-list img {
+  aspect-ratio: calc(8 / 13);
+  object-fit: cover;
+}
+
+.comics-list button {
+  background-color: var(--dc-comics-blue);
+}
+
+.comics-list button.oversection-btn {
+  position: relative;
+  translate: -10% -70%;
 }
 
 .blue-strip {

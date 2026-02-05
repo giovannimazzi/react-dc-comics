@@ -37,8 +37,8 @@ export default function BlueStrip() {
     <section className="blue-strip">
       <div className="container">
         <ul className="d-flex justify-content-between align-items-center list-unstyled m-0 p-5">
-          {links.map(({ url, src, text }) => (
-            <li>
+          {links.map(({ url, src, text }, index) => (
+            <li key={index}>
               <a href={url} aria-label={text} className="blue-link">
                 <img src={src} alt="" />
                 <span>{text}</span>

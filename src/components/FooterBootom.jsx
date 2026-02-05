@@ -43,8 +43,8 @@ export default function FooterBottom() {
         <div className="d-flex align-items-center gap-3">
           <span className="follow-us fw-bold">FOLLOW US</span>
 
-          {links.map(({ url, src, text }) => (
-            <a href={url} aria-label={text}>
+          {links.map(({ url, src, text }, index) => (
+            <a key={index} href={url} aria-label={text}>
               <img src={src} alt="" />
             </a>
           ))}
