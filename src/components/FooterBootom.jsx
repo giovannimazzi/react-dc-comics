@@ -4,6 +4,34 @@ import youtube from "../assets/img/footer-youtube.png";
 import pinterest from "../assets/img/footer-pinterest.png";
 import periscope from "../assets/img/footer-periscope.png";
 
+const links = [
+  {
+    url: "#",
+    src: facebook,
+    text: "Facebook",
+  },
+  {
+    url: "#",
+    src: twitter,
+    text: "Twitter",
+  },
+  {
+    url: "#",
+    src: youtube,
+    text: "YouTube",
+  },
+  {
+    url: "#",
+    src: pinterest,
+    text: "Pinterest",
+  },
+  {
+    url: "#",
+    src: periscope,
+    text: "Periscope",
+  },
+];
+
 export default function FooterBottom() {
   return (
     <section className="footer-bottom text-white">
@@ -15,21 +43,11 @@ export default function FooterBottom() {
         <div className="d-flex align-items-center gap-3">
           <span className="follow-us fw-bold">FOLLOW US</span>
 
-          <a href="#" aria-label="Facebook">
-            <img src={facebook} alt="" />
-          </a>
-          <a href="#" aria-label="Twitter">
-            <img src={twitter} alt="" />
-          </a>
-          <a href="#" aria-label="YouTube">
-            <img src={youtube} alt="" />
-          </a>
-          <a href="#" aria-label="Pinterest">
-            <img src={pinterest} alt="" />
-          </a>
-          <a href="#" aria-label="Periscope">
-            <img src={periscope} alt="" />
-          </a>
+          {links.map(({ url, src, text }) => (
+            <a href={url} aria-label={text}>
+              <img src={src} alt="" />
+            </a>
+          ))}
         </div>
       </div>
     </section>
