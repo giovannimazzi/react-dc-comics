@@ -1,49 +1,5 @@
-import logo from "/dc-logo.png";
-
-const links = [
-  {
-    url: "#",
-    text: "CHARACTERS",
-  },
-  {
-    url: "#",
-    text: "COMICS",
-  },
-  {
-    url: "#",
-    text: "MOVIES",
-  },
-  {
-    url: "#",
-    text: "TV",
-  },
-  {
-    url: "#",
-    text: "GAMES",
-  },
-  {
-    url: "#",
-    text: "COLLECTIBLES",
-  },
-  {
-    url: "#",
-    text: "VIDEOS",
-  },
-  {
-    url: "#",
-    text: "FANS",
-  },
-  {
-    url: "#",
-    text: "NEWS",
-  },
-  {
-    url: "#",
-    text: "SHOP",
-  },
-];
-
-export default function Header() {
+export default function Header({ logo, links }) {
+  logo = logo || "#";
   return (
     <header>
       <div className="container">
