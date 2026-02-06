@@ -30,12 +30,13 @@ header a::after {
   height: 5px;
   background-color: var(--dc-comics-blue);
   opacity: 0;
+  transition: 0.1s linear;
 }
 
 header a:hover::after,
 header a.active::after {
   opacity: 1;
-  transition: 0.1s linear;
+  transition: 0.3s linear;
 }
 
 main {
@@ -47,7 +48,7 @@ main {
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 350px;
+  height: 420px;
 }
 
 .comics-list img {
