@@ -1,3 +1,5 @@
+import BlueStripLink from "./BlueStripLink";
+
 import digital from "../assets/img/buy-comics-digital-comics.png";
 import merchandise from "../assets/img/buy-comics-merchandise.png";
 import subscriptions from "../assets/img/buy-comics-subscriptions.png";
@@ -37,12 +39,9 @@ export default function BlueStrip() {
     <section className="blue-strip">
       <div className="container">
         <ul className="d-flex justify-content-between align-items-center list-unstyled m-0 p-5">
-          {links.map(({ url, src, text }, index) => (
+          {links.map((link, index) => (
             <li key={index}>
-              <a href={url} aria-label={text} className="blue-link">
-                <img src={src} alt="" />
-                <span>{text}</span>
-              </a>
+              <BlueStripLink link={link} />
             </li>
           ))}
         </ul>
