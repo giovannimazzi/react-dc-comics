@@ -1,7 +1,5 @@
 import comics from "../comics";
 
-const data = comics.map(({ id, thumb, series }) => ({ id, thumb, series }));
-
 export default function ComicsList() {
   return (
     <div className="container py-2 px-0 comics-list">
@@ -10,7 +8,7 @@ export default function ComicsList() {
       </button>
       <div className="d-flex flex-column justify-content-between align-items-center gap-3">
         <div className="row row-cols-6 align-self-stretch gy-4">
-          {data.map(({ id, thumb, series }) => (
+          {comics.map(({ id, thumb, series }) => (
             <div key={id} className="col">
               <a href="#" className="text-decoration-none">
                 <div className="card border-0 rounded-0 bg-transparent text-light">
